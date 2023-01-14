@@ -6,14 +6,10 @@ let _db;
 async function connect() {
     dotenv.config();
     const uri = `mongodb+srv://${process.env.DB_USERNAME}:${process.env.DB_PASSWORD}@cluster0.fnbzrec.mongodb.net/?retryWrites=true&w=majority`;
-    console.log('URI:',uri);
-    // const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
     const client = new MongoClient(uri);
-    console.log('Step 1...');
     try {
         await client.connect();
         console.log('Step 2...');
-        // const dbStr = await listDatabases(client);
         _db = client;
         return true;
     }
@@ -31,17 +27,3 @@ function getDb () {
 }
 
 module.exports = { connect, getDb };
-// main().catch(console.error);
-
-// async function listDatabases(client) {
-//     databaseList = await client.db().admin().listDatabases();
-//     console.log("Databases:")
-//     databaseList.databases.forEach(db => console.log(` - ${db.name}`));
-// };
-
-async function listDatabases(client) {
-    databaseList = await client.db().admin().listDatabases();
-    let dbStr;
-    databaseList.databases.forEach(db => dbStr += `${db.name} `);
-    return dbStr;
-};

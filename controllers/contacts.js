@@ -6,7 +6,6 @@ const getAll = async (req, res, next) => {
     const cursor = collection.find();
     const records = await cursor.toArray();
     res.status(200).json(records);
-    // res.send('working here...');
   };
 
   module.exports = { getAll };
