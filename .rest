@@ -24,10 +24,10 @@ content-type: application/json
     "firstName":"Kelly",
     "lastName":"Wiley",
     "email":"kellywiley@gmail.com",
-    "favoriteColor":"orange",
+    "favoriteColor":"purple",
     "birthday":"2001-01-01"
 }
 
 ###
-DELETE https://rrcox-cse341.onrender.com/contacts/63ccd13d49232c9436b4f58c HTTP/1.1
+DELETE https://rrcox-cse341.onrender.com/contacts/63cce6b90f03eeb56b30b80d HTTP/1.1
 content-type: application/json
