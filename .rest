@@ -1,5 +1,7 @@
-# GET https://rrcox-cse341.onrender.com/contacts
+###
+GET https://rrcox-cse341.onrender.com/contacts
 
+###
 POST https://rrcox-cse341.onrender.com/contacts HTTP/1.1
 context-type: application/json
 
@@ -11,13 +13,14 @@ context-type: application/json
     "birthday": "04/01/2001"
 }
 
-# POST http://localhost:5500/contacts HTTP/1.1
-# context-type: application/json
+###
+POST http://localhost:8080/contacts HTTP/1.1
+context-type: application/json
 
-# {
-#     "firstName": "Fred",
-#     "lastName": "Smith",
-#     "email": "fred@smith.com",
-#     "favoriteColor": "brown",
-#     "birthday": "04/01/2001"
-# }
+{
+    "firstName": "Fred",
+    "lastName": "Smith",
+    "email": "fred@smith.com",
+    "favoriteColor": "brown",
+    "birthday": "04/01/2001"
+}

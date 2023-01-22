@@ -21,12 +21,19 @@ const getAll = async (req, res, next) => {
   const createContact = async(req, res, next) => {
     // const contact = req.body;
     // console.log(req.body);
+    // const contact = {
+    //   firstName: req.body.firstName,
+    //   lastName: req.body.lastName,
+    //   email: req.body.email,
+    //   favoriteColor: req.body.favoriteColor,
+    //   birthday: req.body.birthday
+    // }
     const contact = {
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      email: req.body.email,
-      favoriteColor: req.body.favoriteColor,
-      birthday: req.body.birthday
+      firstName: "fred",
+      lastName: "smith",
+      email: "fred@smith.com",
+      favoriteColor: "blue",
+      birthday: "01/01/01"
     }
     const  db = await client.getDb().db('cse341');
     const collection = db.collection('contacts');
