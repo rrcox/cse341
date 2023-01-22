@@ -6,7 +6,7 @@ GET https://rrcox-cse341.onrender.com/contacts
 
 ###
 POST https://rrcox-cse341.onrender.com/contacts HTTP/1.1
-context-type: application/json
+content-type: application/json
 
 {
     "firstName":"Fred",
@@ -18,7 +18,7 @@ context-type: application/json
 
 ###
 PUT https://rrcox-cse341.onrender.com/contacts/63c2891a5703427450a5def0 HTTP/1.1
-context-type: application/json
+content-type: application/json
 
 {
     "firstName":"Kelly",
@@ -30,7 +30,7 @@ context-type: application/json
 
 ###
 # PUT http://127.0.0.1:3000/contacts/63c2891a5703427450a5def0 HTTP/1.1
-# context-type: application/json
+# content-type: application/json
 
 # {
 #     "firstName":"Kelly",
@@ -42,7 +42,7 @@ context-type: application/json
 
 ###
 # POST https://localhost:3000/contacts 
-# context-type: application/json
+# content-type: application/json
 
 # {
 #     "firstName":"Fred",

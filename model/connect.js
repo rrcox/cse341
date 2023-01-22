@@ -9,7 +9,6 @@ async function connect() {
     const client = new MongoClient(uri);
     try {
         await client.connect();
-        console.log('Step 2...');
         _db = client;
         return true;
     }
