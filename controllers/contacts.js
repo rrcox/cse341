@@ -26,7 +26,7 @@ const getAll = async (req, res, next) => {
       lastName: req.body.lastName,
       email: req.body.email,
       favoriteColor: req.body.favoriteColor,
-      birthday: req.body.birthday,
+      birthday: req.body.birthday
     }
     const  db = await client.getDb().db('cse341');
     const collection = db.collection('contacts');
@@ -34,7 +34,7 @@ const getAll = async (req, res, next) => {
     if (response.acknowledged) {
       res.status(201).json(response);
     } else {
-      res.status(500).json(response.error);
+      res.status(500).json('something is wrong');
     }
   }
 
