@@ -19,14 +19,14 @@ const getAll = async (req, res, next) => {
   };
 
   const createContact = async(req, res, next) => {
-    const contact = req.body;
+    // const contact = req.body;
     const  db = await client.getDb().db('cse341');
     const collection = db.collection('contacts');
     collection.insert(req.body, (error, result) => {
       if (error) {
-        return response.status(500).send(error);
+        return res.status(500).send(error);
       }
-      response.send(result.result);
+      res.send(result.result);
     })
   }
 
