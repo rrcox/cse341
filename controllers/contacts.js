@@ -20,14 +20,22 @@ const getAll = async (req, res, next) => {
 
   const createContact = async(req, res, next) => {
     // const contact = req.body;
+    // console.log(req.body);
+    const contact = {
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
+      email: req.body.email,
+      favoriteColor: req.body.favoriteColor,
+      birthday: req.body.birthday,
+    }
     const  db = await client.getDb().db('cse341');
     const collection = db.collection('contacts');
-    collection.insert(req.body, (error, result) => {
-      if (error) {
-        return res.status(500).send(error);
-      }
-      res.send(result.result);
-    })
+    const response = await collection.insertOne(contact);
+    if (response.acknowledged) {
+      res.status(201).json(response);
+    } else {
+      res.status(500).json(response.error);
+    }
   }
 
   module.exports = { getAll, getOne, createContact };
