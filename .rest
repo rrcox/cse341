@@ -2,7 +2,7 @@
 GET https://rrcox-cse341.onrender.com/contacts
 
 ###
-# GET http://127.0.0.1:3000/contacts
+GET https://rrcox-cse341.onrender.com/contacts/63c28a525703427450a5def2
 
 ###
 POST https://rrcox-cse341.onrender.com/contacts HTTP/1.1
@@ -29,25 +29,5 @@ content-type: application/json
 }
 
 ###
-# PUT http://127.0.0.1:3000/contacts/63c2891a5703427450a5def0 HTTP/1.1
-# content-type: application/json
-
-# {
-#     "firstName":"Kelly",
-#     "lastName":"Wiley",
-#     "email":"kellywiley@gmail.com",
-#     "favoriteColor":"white",
-#     "birthday":"2001-01-01"
-# }
-
-###
-# POST https://localhost:3000/contacts 
-# content-type: application/json
-
-# {
-#     "firstName":"Fred",
-#     "lastName":"Smith",
-#     "email":"fred@smith.com",
-#     "favoriteColor":"b",
-#     "birthday":"04/01/2001"
-# }
+DELETE https://rrcox-cse341.onrender.com/contacts/63ccd13d49232c9436b4f58c HTTP/1.1
+content-type: application/json
