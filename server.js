@@ -7,13 +7,18 @@ const app = express();
 dotenv.config();
 const port = process.env.PORT || 3001;
 
+// app
+//     .use(bodyParser.json())
+//     .use((req, res, next) => {
+//         res.setHeader('Access-Control-Allow-Origin', '*');
+//         next();
+//       })
+//     .use('/', require('./routes'));
+
 app
-    .use(bodyParser.json())
-    .use((req, res, next) => {
-        res.setHeader('Access-Control-Allow-Origin', '*');
-        next();
-      })
+    .use(express.json())
     .use('/', require('./routes'));
+
 
 const start = async () => {
     const connected = await db.connect();    
