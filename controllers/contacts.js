@@ -12,10 +12,22 @@ const getAll = async (req, res, next) => {
   const getOne = async (req, res, next) => {
     const userId = new ObjectId(req.params.id);
     const  db = await client.getDb().db('cse341');
-    const collection = db.collection('contacts')
+    const collection = db.collection('contacts');
     const cursor = collection.find({ _id: userId });
-    const document = await cursor.toArray();
+    const document = await cursor.toArray(); 
     res.status(200).json(document);
   };
 
-  module.exports = { getAll, getOne };
+  const createContact = async(req, res, next) => {
+    const contact = req.body;
+    const  db = await client.getDb().db('cse341');
+    const collection = db.collection('contacts');
+    collection.insert(req.body, (error, result) => {
+      if (error) {
+        return response.status(500).send(error);
+      }
+      response.send(result.result);
+    })
+  }
+
+  module.exports = { getAll, getOne, createContact };
