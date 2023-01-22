@@ -15,7 +15,7 @@ app
       })
     .use('/', require('./routes'));
 
-const start = async () =>{
+const start = async () => {
     const connected = await db.connect();    
     app.listen(port, () => {
         if (connected) {

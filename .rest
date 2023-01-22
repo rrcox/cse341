@@ -12,3 +12,27 @@ context-type: application/json
     "favoriteColor":"brown",
     "birthday":"04/01/2001"
 }
+
+###
+PUT https://rrcox-cse341.onrender.com/contacts HTTP/1.1
+context-type: application/json
+
+{
+    "firstName":"Kelly",
+    "lastName":"Wiley",
+    "email":"kellywiley@gmail.com",
+    "favoriteColor":"white",
+    "birthday":"2001-01-01"
+}
+
+###
+# POST https://localhost:3000/contacts 
+# context-type: application/json
+
+# {
+#     "firstName":"Fred",
+#     "lastName":"Smith",
+#     "email":"fred@smith.com",
+#     "favoriteColor":"b",
+#     "birthday":"04/01/2001"
+# }
