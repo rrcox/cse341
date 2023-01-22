@@ -39,21 +39,21 @@ const createContact = async(req, res, next) => {
 const updateContact = async (req, res) => {
   const userId = new ObjectId(req.params.id);
   
-  // const contact = {
-  //   firstName: req.body.firstName,
-  //   lastName: req.body.lastName,
-  //   email: req.body.email,
-  //   favoriteColor: req.body.favoriteColor,
-  //   birthday: req.body.birthday
-  // };
   const contact = {
-    firstName:"Kelly",
-    lastName:"Wiley",
-    email:"kellywiley@gmail.com",
-    favoriteColor:"white",
-    birthday:"2001-01-01"
+    firstName: req.body.firstName,
+    lastName: req.body.lastName,
+    email: req.body.email,
+    favoriteColor: req.body.favoriteColor,
+    birthday: req.body.birthday
   };
-  
+  // const contact = {
+  //   firstName:"Kelly",
+  //   lastName:"Wiley",
+  //   email:"kellywiley@gmail.com",
+  //   favoriteColor:"white",
+  //   birthday:"2001-01-01"
+  // };
+
   const  db = await client.getDb().db('cse341');
   const collection = db.collection('contacts');
   const response = await collection.replaceOne({ _id: userId }, contact);

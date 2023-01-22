@@ -24,7 +24,7 @@ content-type: application/json
     "firstName":"Kelly",
     "lastName":"Wiley",
     "email":"kellywiley@gmail.com",
-    "favoriteColor":"white",
+    "favoriteColor":"orange",
     "birthday":"2001-01-01"
 }
 
