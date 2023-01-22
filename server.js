@@ -16,7 +16,7 @@ const port = process.env.PORT || 3001;
 //     .use('/', require('./routes'));
 
 app
-    .use(express.json())
+    .use(bodyParser.json())
     .use('/', require('./routes'));
 
 
