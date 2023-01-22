@@ -1,12 +1,15 @@
 const express = require('express');
-const dotenv = require("dotenv");
+const bodyParser = require('body-parser')
+const dotenv = require('dotenv');
 const db = require('./model/connect');
 
 const app = express();
 dotenv.config();
 const port = process.env.PORT || 3001;
 
-app.use('/', require('./routes'))
+app
+    .use(bodyParser.json())
+    .use('/', require('./routes'));
 
 const start = async () =>{
     const connected = await db.connect();    
