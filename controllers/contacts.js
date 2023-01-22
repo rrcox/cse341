@@ -39,6 +39,7 @@ const createContact = async(req, res, next) => {
 const updateContact = async (req, res) => {
   const userId = new ObjectId(req.params.id);
   // be aware of updateOne if you only want to update specific fields
+  console.log(req.body);
   const contact = {
     firstName: req.body.firstName,
     lastName: req.body.lastName,
