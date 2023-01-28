@@ -2,6 +2,8 @@ const express = require('express');
 const dotenv = require('dotenv');
 const db = require('./model/connect');
 
+const swaggerAutogen = require('swagger-autogen')();
+
 const app = express();
 dotenv.config();
 const port = process.env.PORT || 3001;
