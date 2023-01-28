@@ -8,9 +8,13 @@ const app = express();
 dotenv.config();
 const port = process.env.PORT || 3001;
 
+const swaggerUi = require('swagger-ui-express');
+const swaggerDocument = require('./swagger-output.json');
+
 app
     .use(express.json())
-    .use('/', require('./routes'));
+    .use('/', require('./routes'))
+    .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 
 const start = async () => {
