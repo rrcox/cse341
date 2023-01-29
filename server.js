@@ -14,6 +14,10 @@ const swaggerDocument = require('./swagger-output.json');
 app
     .use(express.json())
     .use('/', require('./routes'))
+    .use((req, res, next) => {
+        res.setHeader('Access-Control-Allow-Origin', '*');
+        next();
+    })
     .use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 
