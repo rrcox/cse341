@@ -1,13 +1,14 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "My API",
-    "description": "Description",
+    "title": "CSE 341 Contacts API",
+    "description": "Allows access to manage the contacts documents in the MogoDB database.",
     "version": "1.0.0"
   },
   "host": "rrcox-cse341.onrender.com",
   "basePath": "/",
   "schemes": [
+    "http",
     "https"
   ],
   "paths": {
