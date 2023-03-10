@@ -2,11 +2,73 @@ const swaggerAutogen = require('swagger-autogen')();
 
 const doc = {
   info: {
-    title: 'CSE 341 Contacts API',
-    description: 'Allows access to manage the contacts documents in the MogoDB database.',
+    title: 'Book of Mormon Daily Scripture API',
+    description: 'Provides endpoints for retrieving daily scriptures for \
+                  users based on user preferences. Also provides admin \
+                  functionality for managing users and settings.',
   },
   host: 'rrcox-cse341.onrender.com',
-  schemes: ['http','https'],
+  basepath: "/",
+  consumes: ['application/json'],
+  produces: ['application/json'],
+  // tags: [
+  //   {
+  //     'name': 'Users',
+  //     // 'description': 'Endpoints'
+  //   },
+  //   {
+  //     'name': 'User',
+  //     // 'description': 'Endpoints'
+  //   },
+  //   {
+  //     'name': 'Scriptures',
+  //     'description': 'Endpoints.'
+  //   },
+  //   {
+  //     'name': 'Scripture',
+  //     // 'description': 'Endpoints'
+  //   },
+  //   // {
+  //   //   'name': 'Settings/Font',
+  //   //   'description': 'Endpoints'
+  //   // }
+  // ],
+  definitions: {
+    user: {
+      admin: 'false',
+      firstName: 'John',
+      lastName: 'Doe',
+      userName: 'john.doe@email.com',
+      password: 'mypassword',
+      favorites: [
+        {
+          reference: '1 Nephi 1:1',
+          text: 'I, Nephi, ...',
+          link: 'https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/1?lang=eng',
+          image: 'https://www.churchofjesuschrist.org/search?lang=eng&type=image&query=nephi',
+          topic: ['Parents']
+        }
+      ],
+      settings: {
+        font: 'Roboto',
+        color: '#2196F3',
+        topic: ['Parents', 'Prayer']
+      }
+    },
+    scripture: {
+      reference: '1 Nephi 1:1',
+      text: 'I, Nephi, ...',
+      link: 'https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/1?lang=eng',
+      image: 'https://www.churchofjesuschrist.org/search?lang=eng&type=image&query=nephi',
+      topic: ['Parents']
+    },
+    settings: {
+      font: ['Roboto', 'Lato' ],
+      color: ['#2196F3', '#ffffff'],
+      topic: ['Parents', 'Prayer']
+    }
+  },
+  schemes: ['https']
 };
 
 const outputFile = './swagger-output.json';
