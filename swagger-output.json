@@ -8,6 +8,7 @@
   "host": "rrcox-cse341.onrender.com",
   "basePath": "/",
   "schemes": [
+    "http",
     "https"
   ],
   "consumes": [
@@ -23,6 +24,9 @@
           "User"
         ],
         "description": "Gets users listed in an array of user IDs. Accessible only by admin user",
+        "produces": [
+          "application/json"
+        ],
         "parameters": [
           {
             "name": "array",
@@ -31,7 +35,14 @@
             "type": "string"
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "OK"
+          },
+          "400": {
+            "description": "Bad Request"
+          }
+        }
       },
       "delete": {
         "tags": [

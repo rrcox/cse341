@@ -69,7 +69,7 @@ const doc = {
       topic: ['Parents', 'Prayer']
     }
   },
-  schemes: ['https']
+  schemes: ['http', 'https']
 };
 
 const outputFile = './swagger-output.json';
