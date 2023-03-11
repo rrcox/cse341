@@ -14,6 +14,7 @@ const getUsers = async (req, res) => {
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(users);
     });
+    
 }
 
 const getUser = async (req, res) => {
