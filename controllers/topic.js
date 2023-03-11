@@ -29,4 +29,5 @@ const updateTopic = async (req, res) => {
 //     // code goes here
 // };
  
-module.exports = { getTopics, createTopic, updateTopic, deleteTopics };
+// module.exports = { getTopics, createTopic, updateTopic, deleteTopics };
+module.exports = { createTopic, updateTopic };

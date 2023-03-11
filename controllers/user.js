@@ -66,4 +66,5 @@ const deleteUser = async (req, res) => {
     // code goes here
 };
 
-module.exports = { getUsers, getUser, createUser, updateUser, deleteUsers, deleteUser };
+// module.exports = { getUsers, getUser, createUser, updateUser, deleteUsers, deleteUser };
+module.exports = { getUser, createUser, updateUser, deleteUser };

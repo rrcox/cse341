@@ -43,4 +43,5 @@ const deleteScripture = async (req, res) => {
     // code goes here
 };
 
-module.exports = { getScriptures, getScripture, createScripture, updateScripture, deleteScriptures, deleteScripture };
+// module.exports = { getScriptures, getScripture, createScripture, updateScripture, deleteScriptures, deleteScripture };
+module.exports = { getScripture, createScripture, updateScripture, deleteScripture };
