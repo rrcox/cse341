@@ -1,21 +1,21 @@
 const client = require('../model/connect');
 const ObjectId = require('mongodb').ObjectId;
 
-const getUsers = async (req, res) => {
-    // #swagger.tags = ['User']
-    // #swagger.description = 'Gets users listed in an array of user IDs. Accessible only by admin user'
+// const getUsers = async (req, res) => {
+//     // #swagger.tags = ['User']
+//     // #swagger.description = 'Gets users listed in an array of user IDs. Accessible only by admin user'
 
-    const result = await dbConnect.getDb().db('cse341').collection('user').find();
+//     const result = await dbConnect.getDb().db('cse341').collection('user').find();
  
-    result.toArray((err, users) => {
-        if(err) {
-            res.status(400).json({message: err})
-        }
-        res.setHeader('Content-Type', 'application/json');
-        res.status(200).json(users);
-    });
-    
-}
+//     result.toArray((err, users) => {
+//         if(err) {
+//             res.status(400).json({message: err})
+//         }
+//         res.setHeader('Content-Type', 'application/json');
+//         res.status(200).json(users);
+//     });
+
+// }
 
 const getUser = async (req, res) => {
     // #swagger.tags = ['User']
@@ -52,12 +52,12 @@ const updateUser = async (req, res) => {
     // code goes here
 };
 
-const deleteUsers = async (req, res) => {
-    // #swagger.tags = ['User']
-    // #swagger.description = 'Deletes users listed in an array of user IDs. Accessible only by admin user.'
+// const deleteUsers = async (req, res) => {
+//     // #swagger.tags = ['User']
+//     // #swagger.description = 'Deletes users listed in an array of user IDs. Accessible only by admin user.'
 
-    // code goes here
-};
+//     // code goes here
+// };
  
 const deleteUser = async (req, res) => {
     // #swagger.tags = ['User']

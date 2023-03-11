@@ -1,12 +1,12 @@
 const client = require('../model/connect');
 const ObjectId = require('mongodb').ObjectId;
 
-const getScriptures = async (req, res) => {
-    // #swagger.tags = ['Scripture']
-    // #swagger.description = 'Gets scriptures listed in an array of scripture IDs.'
+// const getScriptures = async (req, res) => {
+//     // #swagger.tags = ['Scripture']
+//     // #swagger.description = 'Gets scriptures listed in an array of scripture IDs.'
 
-    // code goes here
-};
+//     // code goes here
+// };
 
 const getScripture = async (req, res) => {
     // #swagger.tags = ['Scripture']
@@ -29,12 +29,12 @@ const updateScripture = async (req, res) => {
     // code goes here
 };
 
-const deleteScriptures = async (req, res) => {
-    // #swagger.tags = ['Scripture']
-    // #swagger.description = 'Deletes scriptures listed in an array of scripture IDs.  Accessible only by admin user.'
+// const deleteScriptures = async (req, res) => {
+//     // #swagger.tags = ['Scripture']
+//     // #swagger.description = 'Deletes scriptures listed in an array of scripture IDs.  Accessible only by admin user.'
 
-    // code goes here
-};
+//     // code goes here
+// };
  
 const deleteScripture = async (req, res) => {
     // #swagger.tags = ['Scripture']

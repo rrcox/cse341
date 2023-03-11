@@ -1,12 +1,12 @@
 const client = require('../model/connect');
 const ObjectId = require('mongodb').ObjectId;
 
-const getTopics = async (req, res) => {
-    // #swagger.tags = ['Settings/Topic']
-    // #swagger.description = 'Gets topics listed in an array of topic IDs.'
+// const getTopics = async (req, res) => {
+//     // #swagger.tags = ['Settings/Topic']
+//     // #swagger.description = 'Gets topics listed in an array of topic IDs.'
 
-    // code goes here
-};
+//     // code goes here
+// };
 
 const createTopic = async(req, res) => {
     // #swagger.tags = ['Settings/Topic']
@@ -22,11 +22,11 @@ const updateTopic = async (req, res) => {
     // code goes here
 };
 
-const deleteTopics = async (req, res) => {
-    // #swagger.tags = ['Settings/Topic']
-    // #swagger.description = 'Deletes topics listed in an array of topic IDs.  Accessible only by admin user.'
+// const deleteTopics = async (req, res) => {
+//     // #swagger.tags = ['Settings/Topic']
+//     // #swagger.description = 'Deletes topics listed in an array of topic IDs.  Accessible only by admin user.'
 
-    // code goes here
-};
+//     // code goes here
+// };
  
 module.exports = { getTopics, createTopic, updateTopic, deleteTopics };
