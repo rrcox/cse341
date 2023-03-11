@@ -18,48 +18,6 @@
     "application/json"
   ],
   "paths": {
-    "/user/{array}": {
-      "get": {
-        "tags": [
-          "User"
-        ],
-        "description": "Gets users listed in an array of user IDs. Accessible only by admin user",
-        "produces": [
-          "application/json"
-        ],
-        "parameters": [
-          {
-            "name": "array",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "OK"
-          },
-          "400": {
-            "description": "Bad Request"
-          }
-        }
-      },
-      "delete": {
-        "tags": [
-          "User"
-        ],
-        "description": "Deletes users listed in an array of user IDs. Accessible only by admin user.",
-        "parameters": [
-          {
-            "name": "array",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {}
-      }
-    },
     "/user/{id}": {
       "get": {
         "tags": [
@@ -118,38 +76,6 @@
         ],
         "description": "Creates a user. Admin user can create any user.",
         "parameters": [],
-        "responses": {}
-      }
-    },
-    "/scripture/{array}": {
-      "get": {
-        "tags": [
-          "Scripture"
-        ],
-        "description": "Gets scriptures listed in an array of scripture IDs.",
-        "parameters": [
-          {
-            "name": "array",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {}
-      },
-      "delete": {
-        "tags": [
-          "Scripture"
-        ],
-        "description": "Deletes scriptures listed in an array of scripture IDs. Accessible only by admin user.",
-        "parameters": [
-          {
-            "name": "array",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
         "responses": {}
       }
     },
@@ -320,38 +246,6 @@
         "parameters": [
           {
             "name": "id",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {}
-      }
-    },
-    "/settings/topic/{array}": {
-      "get": {
-        "tags": [
-          "Settings/Topic"
-        ],
-        "description": "Gets topics listed in an array of topic IDs.",
-        "parameters": [
-          {
-            "name": "array",
-            "in": "path",
-            "required": true,
-            "type": "string"
-          }
-        ],
-        "responses": {}
-      },
-      "delete": {
-        "tags": [
-          "Settings/Topic"
-        ],
-        "description": "Deletes topics listed in an array of topic IDs. Accessible only by admin user.",
-        "parameters": [
-          {
-            "name": "array",
             "in": "path",
             "required": true,
             "type": "string"
