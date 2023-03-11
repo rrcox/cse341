@@ -63,7 +63,11 @@
             "type": "string"
           }
         ],
-        "responses": {}
+        "responses": {
+          "200": {
+            "description": "OK"
+          }
+        }
       },
       "put": {
         "tags": [
@@ -396,6 +400,10 @@
         "password": {
           "type": "string",
           "example": "mypassword"
+        },
+        "profileImage": {
+          "type": "string",
+          "example": "https://picsum.photos/200"
         },
         "favorites": {
           "type": "array",

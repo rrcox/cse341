@@ -40,6 +40,7 @@ const doc = {
       lastName: 'Doe',
       userName: 'john.doe@email.com',
       password: 'mypassword',
+      profileImage: 'https://picsum.photos/200',
       favorites: [
         {
           reference: '1 Nephi 1:1',

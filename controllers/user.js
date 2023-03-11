@@ -12,7 +12,14 @@ const getUser = async (req, res) => {
     // #swagger.tags = ['User']
     // #swagger.description = 'Gets a single user by id. Admin user can get any user.'
 
-    // code goes here
+    const userId = new ObjectId(req.params.id);
+    
+    const db = await client.getDb().db('cse341');
+    const collection = db.collection('user');
+    const cursor = collection.find({ _id: userId });
+    const document = await cursor.toArray(); 
+    
+    res.status(200).json(document);
 };
 
 const createUser = async(req, res) => {
